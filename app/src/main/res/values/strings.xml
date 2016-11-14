@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Guess The Number</string>
+    <string name="guess_the_number_prompt">Guess the number :)</string>
+    <string name="guessed_greater">Over</string>
+    <string name="guessed_less">Hit me</string>
+    <string name="guessed_equal">Black Jack!</string>
+    <string name="btn_capt_try">Try</string>
+    <string name="number_format_err_msg">Enter a valid number, you.</string>
+    <string name="prompt">Guess the number between 0 and 100</string>
+    <string name="out_of_range">Do not make things complex. Choose 0..100</string>
+    <string name="quit_btn_capt">Quit App</string>
+</resources>
