@@ -41,23 +41,25 @@ public class MainActivity extends AppCompatActivity {
             System.exit(0);
         }
 
-        try {
-            int n = Integer.parseInt(etTry.getText().toString());
+//        Now there is no need in try-catch block as inputType of
+//        editText is set to 'number'
+//        try {
+        int n = Integer.parseInt(etTry.getText().toString());
 
-            if (n < 0 || n > 100) {
-                tvResponse.setText(R.string.out_of_range);
-            }
-            if (n > theNumber) {
-                tvResponse.setText(R.string.guessed_greater);
-            } else if (n < theNumber) {
-                tvResponse.setText(R.string.guessed_less);
-            } else {
-                tvResponse.setText(R.string.guessed_equal);
-                gameOver = true;
-                btnTry.setText(R.string.quit_btn_capt);
-            }
-        } catch (NumberFormatException ex) {
-            tvResponse.setText(R.string.number_format_err_msg);
+        if (n < 0 || n > 100) {
+            tvResponse.setText(R.string.out_of_range);
         }
+        if (n > theNumber) {
+            tvResponse.setText(R.string.guessed_greater);
+        } else if (n < theNumber) {
+            tvResponse.setText(R.string.guessed_less);
+        } else {
+            tvResponse.setText(R.string.guessed_equal);
+            gameOver = true;
+            btnTry.setText(R.string.quit_btn_capt);
+        }
+//        } catch (NumberFormatException ex) {
+//            tvResponse.setText(R.string.number_format_err_msg);
+//        }
     }
 }
